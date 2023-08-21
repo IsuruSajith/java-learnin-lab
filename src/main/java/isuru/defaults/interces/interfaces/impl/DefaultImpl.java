@@ -3,7 +3,7 @@ package isuru.defaults.interces.interfaces.impl;
 
 import isuru.defaults.interces.interfaces.DefaultInter;
 
-public class DefaultImpl implements A,B {
+public class DefaultImpl implements A{
     //diamond problem
 
 }
