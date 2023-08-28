@@ -5,6 +5,5 @@ public class Main {
         Singleton1.getInstance().printThis();
         Singleton1.getInstance().printThis();
 
-
     }
 }
