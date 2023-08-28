@@ -15,4 +15,8 @@ public class Singleton1 {
     public void printThis() {
         System.out.println(this);
     }
+
+    public String getName() {
+        return name;
+    }
 }
