@@ -1,4 +1,4 @@
-package com.isuru.java_random_revision.abstraction;
+package com.isuru.java_random_revision.abstractions;
 
 public abstract class Example {
     public abstract void myMethod();
