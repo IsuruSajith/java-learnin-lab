@@ -7,5 +7,8 @@ public class Example {
             }
             System.out.println();
         }
+        String text = "Isuru";
+        char[] chars = text.toCharArray();
+
     }
 }
