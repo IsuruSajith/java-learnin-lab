@@ -20,31 +20,42 @@ public class Solution {
 
 
     public static int lengthOfLongestSubstring(String s) {
-        int count = 0;
+        int count = 1;
+        int[] countArray = new int[0];
         char[] chars = s.toCharArray();
-        System.out.println(Arrays.toString(chars));
+        if (s==" ") {
+            return 1;
+        }
+        if (chars.length==0) {
+            return 0;
+        }
+        //System.out.println(Arrays.toString(chars));
         for (int i = 0; i < chars.length; i++) {
+            count=1;
             for (int j = i+1; j < chars.length; j++) {
-                if (chars[i]==chars[j]) {
-                    chars[j]=0;
+                if (chars[i] != chars[j]) {
+                    count++;
+                } else {
+                    int[] temp = new int[countArray.length + 1];
+                    temp[countArray.length]=count;
+                    for (int k = 0; k < countArray.length; k++) {
+                        temp[k] = countArray[k];
+                    }
+                    count=1;
+                    countArray = temp;
                 }
             }
         }
-
-        System.out.println(Arrays.toString(chars));
-        for (char aChar : chars) {
-            if (aChar!=0) {
-                count++;
+        int max=0;
+        for (int i : countArray) {
+            if (i>max) {
+                max=i;
             }
         }
 
-
-        return count;
+        //System.out.println(Arrays.toString(countArray));
+        return max;
     }
-
-
-
-
 
 
 
@@ -53,9 +64,12 @@ public class Solution {
         int[] ints = twoSum(nums, 9);
         System.out.println(Arrays.toString(ints));*/
 
-        System.out.println(lengthOfLongestSubstring("abcabcbb"));
+        /*System.out.println(lengthOfLongestSubstring("abcabcbb"));
         System.out.println(lengthOfLongestSubstring("bbb"));
-        System.out.println(lengthOfLongestSubstring("pwwkew"));
+        System.out.println(lengthOfLongestSubstring("pwwkew"));*/
+        /*System.out.println(lengthOfLongestSubstring(""));
+        System.out.println(lengthOfLongestSubstring(" "));*/
+        System.out.println(lengthOfLongestSubstring("au"));
 
     }
 }
