@@ -115,7 +115,7 @@ public class Solution {
        /* System.out.println(lengthOfLongestSubstring("au"));
         System.out.println(lengthOfLongestSubstring("abcabcbb"));*/
 
-
+        System.out.println(searchInsert(new int[]{1, 3, 5, 6}, 7));
 
     }
 }
