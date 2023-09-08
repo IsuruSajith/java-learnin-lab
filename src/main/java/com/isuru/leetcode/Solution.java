@@ -18,7 +18,7 @@ public class Solution {
         return null;
     }
 
-
+//----------------------------------------------------------//
     public static int lengthOfLongestSubstring(String s) {
         int count = 1;
         int[] countArray = new int[0];
@@ -72,7 +72,12 @@ public class Solution {
         return max;
     }
 
+//-----------------------------------------------------------------//
 
+
+    /*Given a sorted array of distinct integers and a target value,
+    return the index if the target is found.
+    If not, return the index where it would be if it were inserted in order.*/
 
     public static void main(String[] args) {
         /*int[] nums = new int[]{2,7,11,15};
