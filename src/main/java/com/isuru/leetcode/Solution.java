@@ -79,6 +79,29 @@ public class Solution {
     return the index if the target is found.
     If not, return the index where it would be if it were inserted in order.*/
 
+
+    public static int searchInsert(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i]==target) {
+                return i;
+            }
+            if (nums[0]>target) {
+                return 0;
+            }
+            if ((i + 1) != nums.length) {
+                if (nums[i] < target && nums[i + 1] > target) {
+                    return i + 1;
+                }
+            } else {
+                return nums.length;
+            }
+        }
+
+        return 0;
+    }
+
+
+
     public static void main(String[] args) {
         /*int[] nums = new int[]{2,7,11,15};
         int[] ints = twoSum(nums, 9);
@@ -89,8 +112,10 @@ public class Solution {
         System.out.println(lengthOfLongestSubstring("pwwkew"));*/
         /*System.out.println(lengthOfLongestSubstring(""));
         System.out.println(lengthOfLongestSubstring(" "));*/
-        System.out.println(lengthOfLongestSubstring("au"));
-        System.out.println(lengthOfLongestSubstring("abcabcbb"));
+       /* System.out.println(lengthOfLongestSubstring("au"));
+        System.out.println(lengthOfLongestSubstring("abcabcbb"));*/
+
+
 
     }
 }
