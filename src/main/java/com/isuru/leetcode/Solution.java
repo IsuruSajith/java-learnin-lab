@@ -29,12 +29,18 @@ public class Solution {
         if (chars.length==0) {
             return 0;
         }
-        //System.out.println(Arrays.toString(chars));
-        for (int i = 0; i < chars.length; i++) {
+        System.out.println(Arrays.toString(chars));
+        for (int i = 0; i < chars.length-1; i++) {
             count=1;
             for (int j = i+1; j < chars.length; j++) {
                 if (chars[i] != chars[j]) {
                     count++;
+                    int[] temp = new int[countArray.length + 1];
+                    temp[countArray.length]=count;
+                    for (int k = 0; k < countArray.length; k++) {
+                        temp[k] = countArray[k];
+                    }
+                    countArray = temp;
                 } else {
                     int[] temp = new int[countArray.length + 1];
                     temp[countArray.length]=count;
@@ -44,6 +50,15 @@ public class Solution {
                     count=1;
                     countArray = temp;
                 }
+
+                /*int[] temp = new int[countArray.length + 1];
+                temp[countArray.length]=count;
+                for (int k = 0; k < countArray.length; k++) {
+                    temp[k] = countArray[k];
+                }
+                count=1;
+                countArray = temp;*/
+
             }
         }
         int max=0;
@@ -70,6 +85,7 @@ public class Solution {
         /*System.out.println(lengthOfLongestSubstring(""));
         System.out.println(lengthOfLongestSubstring(" "));*/
         System.out.println(lengthOfLongestSubstring("au"));
+        System.out.println(lengthOfLongestSubstring("abcabcbb"));
 
     }
 }
