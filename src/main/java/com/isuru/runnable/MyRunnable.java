@@ -20,9 +20,7 @@ class Main {
 
         MyRunnable myRunnable = new MyRunnable();
         Thread thread = new Thread(myRunnable);
-
         thread.start();
-
 
         for (int i = 0; i < 5; i++) {
             System.out.println("Hello from Main! Count: " + i);
