@@ -14,6 +14,7 @@ public class MyRunnable implements Runnable{
         }
 }
 class Main {
+    MyRunnable myRunnable = new MyRunnable();
 
 
 }
