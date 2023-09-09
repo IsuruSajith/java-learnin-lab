@@ -15,7 +15,9 @@ public class MyRunnable implements Runnable{
 }
 class Main {
     MyRunnable myRunnable = new MyRunnable();
+    Thread thread = new Thread(myRunnable);
 
+        thread.start();
 
 }
 
