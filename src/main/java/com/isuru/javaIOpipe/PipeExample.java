@@ -18,5 +18,17 @@ public class PipeExample {
                 e.printStackTrace();
             }
         });
+
+        Thread consumerThread = new Thread(() -> {
+            int data;
+            try {
+                while ((data = pis.read()) != -1) {
+                    System.out.print((char) data);
+                }
+                pis.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
     }
 }
