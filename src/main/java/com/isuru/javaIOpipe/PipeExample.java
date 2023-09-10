@@ -8,5 +8,15 @@ public class PipeExample {
     public static void main(String[] args) throws IOException {
         PipedOutputStream pos = new PipedOutputStream();
         PipedInputStream pis = new PipedInputStream(pos);
+
+
+        Thread producerThread = new Thread(() -> {
+            try {
+                pos.write("Hello, Pipe!".getBytes());
+                pos.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
     }
 }
