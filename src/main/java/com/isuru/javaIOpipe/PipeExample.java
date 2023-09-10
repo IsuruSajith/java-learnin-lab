@@ -30,5 +30,7 @@ public class PipeExample {
                 e.printStackTrace();
             }
         });
+        producerThread.start();
+        consumerThread.start();
     }
 }
