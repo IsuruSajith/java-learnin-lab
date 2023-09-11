@@ -126,16 +126,13 @@ public class Solution {
 
         //---------------------palindrome number------------------------------//
 
-
   /*  @Override
     public boolean equals(Object obj) {
         return super.equals(obj);
     }*/
 
     public static boolean isPalindromeNumber(int x) {
-
         String number = Integer.toString(x);
-
 
         StringBuilder sb = new StringBuilder(number);
         sb.reverse();
@@ -145,10 +142,14 @@ public class Solution {
     //-----------------------ListNode--palindrome-------//
 
     public static boolean isPalindrome(ListNode head) {
-        System.out.println(head);
+        StringBuilder sb = new StringBuilder();
+        while (head != null) {
+            System.out.println(head.val);
+            head=head.next;
+        }
+        //System.out.println(head.next.val);
         return false;
     }
-
 
 
 
@@ -173,6 +174,13 @@ public class Solution {
         //System.out.println(firstBadVersion(2126753390));
         //System.out.println(isPalindromeNumber(111323111));
 
+        ListNode listNode5 = new ListNode(1);
+        ListNode listNode4 = new ListNode(3,listNode5);
+        ListNode listNode3 = new ListNode(2,listNode4);
+        ListNode listNode2 = new ListNode(3,listNode3);
+        ListNode listNode1 = new ListNode(1,listNode2);
+
+        isPalindrome(listNode1);
 
 
     }
