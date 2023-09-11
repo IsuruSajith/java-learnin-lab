@@ -168,9 +168,7 @@ public class Solution {
         } else {
             return (mergedArray[mergedArray.length/2]+mergedArray[(mergedArray.length/2) -1])/2.0;
         }
-//        System.out.println(mergedArray.length%2);
-//        System.out.println(Arrays.toString(mergedArray));
-       // return 0.0;
+
     }
 
 
