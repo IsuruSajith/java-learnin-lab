@@ -126,10 +126,10 @@ public class Solution {
         //---------------------palindrome number------------------------------//
 
 
-    @Override
+  /*  @Override
     public boolean equals(Object obj) {
         return super.equals(obj);
-    }
+    }*/
 
     public static boolean isPalindromeNumber(int x) {
 
@@ -137,9 +137,7 @@ public class Solution {
 
         StringBuilder sb = new StringBuilder(number);
         sb.reverse();
-
         return sb.toString().equals(number);
-
 
 
     }
