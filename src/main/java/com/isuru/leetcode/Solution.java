@@ -152,7 +152,7 @@ public class Solution {
         return sb.reverse().toString().equals(number);
     }
 
-    //------find median sorterd array--------//
+    //------find median sorted array--------//
 
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int[] mergedArray = new int[nums1.length + nums2.length];
@@ -163,8 +163,14 @@ public class Solution {
                 mergedArray[i] = nums2[ i-nums1.length];
             }
         }
-        System.out.println(Arrays.toString(mergedArray));
-        return 0.0;
+        if (mergedArray.length % 2 == 1) {
+            return mergedArray[mergedArray.length / 2];
+        } else {
+            return (mergedArray[mergedArray.length/2]+mergedArray[(mergedArray.length/2) -1])/2.0;
+        }
+//        System.out.println(mergedArray.length%2);
+//        System.out.println(Arrays.toString(mergedArray));
+       // return 0.0;
     }
 
 
@@ -198,7 +204,8 @@ public class Solution {
 
         System.out.println(isPalindrome(listNode1));*/
 
-        findMedianSortedArrays(new int[]{1, 2, 3}, new int[]{4, 5});
+        System.out.println(findMedianSortedArrays(new int[]{1, 2, 3}, new int[]{4, 5}));
+        System.out.println(findMedianSortedArrays(new int[]{1, 2}, new int[]{3, 4}));
 
 
     }
