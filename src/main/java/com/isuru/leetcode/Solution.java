@@ -123,6 +123,16 @@ public class Solution {
             }
         }
 
+        //---------------------palindrome number------------------------------//
+
+
+    public boolean isPalindromeNumber(int x) {
+
+
+
+        return false;
+    }
+
 
 
 
