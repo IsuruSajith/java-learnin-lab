@@ -137,7 +137,6 @@ public class Solution {
 
         StringBuilder sb = new StringBuilder(number);
         sb.reverse();
-        //System.out.println(sb.toString().equals(number));
 
         return sb.toString().equals(number);
 
@@ -167,9 +166,7 @@ public class Solution {
         System.out.println(searchInsert(new int[]{1, 3, 5, 6}, 5));*/
 
         //System.out.println(firstBadVersion(2126753390));
-
         System.out.println(isPalindromeNumber(111323111));
-
 
     }
 }
