@@ -126,11 +126,23 @@ public class Solution {
         //---------------------palindrome number------------------------------//
 
 
-    public boolean isPalindromeNumber(int x) {
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    public static boolean isPalindromeNumber(int x) {
+
+        String number = Integer.toString(x);
+
+        StringBuilder sb = new StringBuilder(number);
+        sb.reverse();
+        //System.out.println(sb.toString().equals(number));
+
+        return sb.toString().equals(number);
 
 
 
-        return false;
     }
 
 
@@ -154,7 +166,9 @@ public class Solution {
         System.out.println(searchInsert(new int[]{1, 3, 5, 6}, 1));
         System.out.println(searchInsert(new int[]{1, 3, 5, 6}, 5));*/
 
-        System.out.println(firstBadVersion(2126753390));
+        //System.out.println(firstBadVersion(2126753390));
+
+        System.out.println(isPalindromeNumber(111323111));
 
 
     }
