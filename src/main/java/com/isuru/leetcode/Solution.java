@@ -140,8 +140,13 @@ public class Solution {
         StringBuilder sb = new StringBuilder(number);
         sb.reverse();
         return sb.toString().equals(number);
+    }
 
+    //-----------------------ListNode--palindrome-------//
 
+    public static boolean isPalindrome(ListNode head) {
+        System.out.println(head);
+        return false;
     }
 
 
@@ -166,7 +171,9 @@ public class Solution {
         System.out.println(searchInsert(new int[]{1, 3, 5, 6}, 5));*/
 
         //System.out.println(firstBadVersion(2126753390));
-        System.out.println(isPalindromeNumber(111323111));
+        //System.out.println(isPalindromeNumber(111323111));
+
+
 
     }
 }
