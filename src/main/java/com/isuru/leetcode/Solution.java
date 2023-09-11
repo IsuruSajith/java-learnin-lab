@@ -144,11 +144,13 @@ public class Solution {
     public static boolean isPalindrome(ListNode head) {
         StringBuilder sb = new StringBuilder();
         while (head != null) {
-            System.out.println(head.val);
+            //System.out.println(head.val);
+            sb.append(head.val);
             head=head.next;
         }
-        //System.out.println(head.next.val);
-        return false;
+        String number = sb.toString();
+        sb.reverse();
+        return sb.reverse().toString().equals(number);
     }
 
 
@@ -180,7 +182,7 @@ public class Solution {
         ListNode listNode2 = new ListNode(3,listNode3);
         ListNode listNode1 = new ListNode(1,listNode2);
 
-        isPalindrome(listNode1);
+        System.out.println(isPalindrome(listNode1));
 
 
     }
