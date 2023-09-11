@@ -152,7 +152,20 @@ public class Solution {
         return sb.reverse().toString().equals(number);
     }
 
-    //------find median sorterd array
+    //------find median sorterd array--------//
+
+    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int[] mergedArray = new int[nums1.length + nums2.length];
+        for (int i = 0; i < nums1.length + nums2.length; i++) {
+            if (i < nums1.length) {
+                mergedArray[i] = nums1[i];
+            } else {
+                mergedArray[i] = nums2[ i-nums1.length];
+            }
+        }
+        System.out.println(Arrays.toString(mergedArray));
+        return 0.0;
+    }
 
 
 
@@ -177,13 +190,15 @@ public class Solution {
         //System.out.println(firstBadVersion(2126753390));
         //System.out.println(isPalindromeNumber(111323111));
 
-        ListNode listNode5 = new ListNode(1);
+       /* ListNode listNode5 = new ListNode(1);
         ListNode listNode4 = new ListNode(3,listNode5);
         ListNode listNode3 = new ListNode(2,listNode4);
         ListNode listNode2 = new ListNode(3,listNode3);
         ListNode listNode1 = new ListNode(1,listNode2);
 
-        System.out.println(isPalindrome(listNode1));
+        System.out.println(isPalindrome(listNode1));*/
+
+        findMedianSortedArrays(new int[]{1, 2, 3}, new int[]{4, 5});
 
 
     }
