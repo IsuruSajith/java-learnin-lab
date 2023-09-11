@@ -149,9 +149,10 @@ public class Solution {
             head=head.next;
         }
         String number = sb.toString();
-        sb.reverse();
         return sb.reverse().toString().equals(number);
     }
+
+    //------find median sorterd array
 
 
 
