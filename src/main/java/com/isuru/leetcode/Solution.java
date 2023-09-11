@@ -1,6 +1,7 @@
 package com.isuru.leetcode;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Solution {
     public static int[] twoSum(int[] nums, int target ) {
@@ -134,6 +135,7 @@ public class Solution {
     public static boolean isPalindromeNumber(int x) {
 
         String number = Integer.toString(x);
+
 
         StringBuilder sb = new StringBuilder(number);
         sb.reverse();
