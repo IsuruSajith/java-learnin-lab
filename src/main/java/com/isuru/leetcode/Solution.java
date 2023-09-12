@@ -219,6 +219,7 @@ public class Solution {
 
         System.out.println(findMedianSortedArrays(new int[]{1, 2, 3}, new int[]{4, 5}));
         System.out.println(findMedianSortedArrays(new int[]{1, 2}, new int[]{3, 4}));
+        System.out.println(findMedianSortedArrays(new int[]{1, 2,5,6}, new int[]{3, 4}));
 
 
     }
