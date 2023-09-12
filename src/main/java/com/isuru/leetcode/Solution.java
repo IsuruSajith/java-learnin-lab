@@ -163,6 +163,21 @@ public class Solution {
                 mergedArray[i] = nums2[ i-nums1.length];
             }
         }
+        System.out.println(Arrays.toString(mergedArray));
+        for (int j = 0; j < mergedArray.length; j++) {
+            int max = mergedArray[0];
+            int index=0;
+            for (int i = 1; i < mergedArray.length-j; i++) {
+                if (mergedArray[i] > max) {
+                    max = mergedArray[i];
+                    index = i;
+                }
+            }
+            mergedArray[index] = mergedArray[mergedArray.length - 1 - j];
+            mergedArray[mergedArray.length-1-j]=max;
+        }
+        System.out.println(Arrays.toString(mergedArray));
+
         if (mergedArray.length % 2 == 1) {
             return mergedArray[mergedArray.length / 2];
         } else {
