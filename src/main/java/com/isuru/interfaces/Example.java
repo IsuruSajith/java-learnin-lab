@@ -9,5 +9,6 @@ public class Example implements MyInterface {
     public static void main(String[] args) {
         Example example = new Example();
         example.myMethod();
+        example.myDefaultMethod();
     }
 }
