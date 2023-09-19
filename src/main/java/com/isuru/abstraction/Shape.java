@@ -6,4 +6,8 @@ public abstract class Shape {
     public void display() {
         System.out.println("Shape at (" + x + ", " + y + ")");
     }
+    public Shape(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
 }
