@@ -10,4 +10,16 @@ public abstract class Shape {
         this.x = x;
         this.y = y;
     }
+
+}
+class Circle extends Shape {
+
+    public Circle(int x, int y) {
+        super(x, y);
+    }
+
+    @Override
+    public double calculateArea() {
+        return 0;
+    }
 }
