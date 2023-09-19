@@ -14,8 +14,11 @@ public abstract class Shape {
 }
 class Circle extends Shape {
 
-    public Circle(int x, int y) {
+    private double radius;
+
+    public Circle(int x, int y, double radius) {
         super(x, y);
+        this.radius = radius;
     }
 
     @Override
