@@ -25,7 +25,7 @@ class IncrementTask implements Runnable {
         for (int i = 0; i < 5; i++) {
             counter.increment();
             try {
-                Thread.sleep(500); // Simulate some work
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 System.err.println("Thread interrupted.");
             }
