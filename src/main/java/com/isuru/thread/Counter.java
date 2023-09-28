@@ -36,23 +36,21 @@ class ThreadExample {
     public static void main(String[] args) {
         Counter counter = new Counter();
 
-        // Create two threads to increment the counter
+
         Thread thread1 = new Thread(new IncrementTask(counter));
         Thread thread2 = new Thread(new IncrementTask(counter));
 
-        // Start the threads
         thread1.start();
         thread2.start();
 
         try {
-            // Wait for threads to complete
+
             thread1.join();
             thread2.join();
         } catch (InterruptedException e) {
             System.err.println("Main thread interrupted.");
         }
 
-        // Print the final count
         System.out.println("Final Count: " + counter.getCount());
     }
 }
