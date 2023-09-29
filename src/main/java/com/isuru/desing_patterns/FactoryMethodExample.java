@@ -16,6 +16,22 @@ class ConcreteProductB implements Product {
         System.out.println("Product B created.");
     }
 }
+
+abstract class Creator {
+    abstract Product factoryMethod();
+}
+
+class ConcreteCreatorA extends Creator {
+    Product factoryMethod() {
+        return new ConcreteProductA();
+    }
+}
+
+class ConcreteCreatorB extends Creator {
+    Product factoryMethod() {
+        return new ConcreteProductB();
+    }
+}
 public class FactoryMethodExample {
 
 }
