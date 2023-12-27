@@ -2,34 +2,39 @@ package com.isuru.diamond_problem;
 
 public class Diamond {
     public static void main(String[] args) {
-        D d = new D();
-        d.display();  // Output: Class B
+        // Creating an anonymous class implementing Interface D
+        D d = new D() {
+            // Implementing display() is mandatory due to diamond problem
+            @Override
+            public void display() {
+                System.out.println("Implementation in Interface D");
+            }
+        };
+
+        d.display();  // Output: Implementation in Interface D
     }
 }
 
 
 interface A {
-    void display();
-}
-
-class B implements A {
-    public void display() {
-        System.out.println("Class B");
+    default void display() {
+        System.out.println("Interface A");
     }
 }
 
-class C implements A {
-    public void display() {
-        System.out.println("Class C");
-    }
+interface B extends A {
+
 }
 
-class D extends B {
-    public void display() {
-        // Specify which interface's method you want to call
-        //B.super.display(); // Call display method from interface B
-    }
+interface C extends A {
+
 }
+
+
+interface D extends B, C {
+
+}
+
 
 
 
