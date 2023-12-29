@@ -2,7 +2,6 @@ package com.isuru.diamond_problem;
 
 public class Diamond {
     public static void main(String[] args) {
-
         D d = new D() {
 
             @Override
@@ -10,6 +9,7 @@ public class Diamond {
                 System.out.println("Implementation in Interface D");
             }
         };
+        d.display();
 
     }
 }
