@@ -6,3 +6,7 @@ L - Liskov substitution principle
 I - Interface segregation principle
 D - Dependency inversion principle
 
+==========================================
+interview questions in java
+
+
