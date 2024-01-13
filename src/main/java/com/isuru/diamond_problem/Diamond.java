@@ -4,10 +4,10 @@ public class Diamond {
     public static void main(String[] args) {
         D d = new D() {
 
-            @Override
-            public void display() {
+            //@Override
+            /*public void display() {
                 System.out.println("Implementation in Interface D");
-            }
+            }*/
         };
         d.display();
 
