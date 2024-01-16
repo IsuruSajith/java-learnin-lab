@@ -31,6 +31,5 @@ public class SortedArray {
             System.out.println(Arrays.toString(mergeArray));
         }
 
-
     }
 }
